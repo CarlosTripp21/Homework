@@ -24,8 +24,8 @@ class Grupo{
         this.subgrupo.push(subgrupo);
         return this;
     }
-    addChek(tarea, value){
-        this.checks.push(new Check(tarea, value));
+    addChek(homework, value){
+        this.checks.push(new Check(homework, value));
         return this;
     }
 }
@@ -51,12 +51,12 @@ class subGrupo{
 }
 
 class Check{
-    constructor(tarea, value=0){
-        this.tarea=tarea;
+    constructor(homework, value=0){
+        this.homework=homework;
         this.value=value;
     }
-    setValue(tarea, value){
-        this.tarea=tarea;
+    setValue(homework, value){
+        this.homework=homework;
         this.value = value;
         return this;
     }
@@ -66,11 +66,11 @@ class Check{
 let Checklist1 = new checklist();
 
 
-let grupo = new Grupo('Tarea Técnica');
-let redes=new subGrupo("Tarea de red");
-let mantenimiento=new subGrupo("Tarea de mantenimiento");
-let encender=new Check("Modem Encendido");
-let conectar=new Check("Conexion Establecida");
+let grupo = new Grupo('Gupo1');
+let redes=new subGrupo("Gupo2");
+let mantenimiento=new subGrupo("Gupo3");
+let encender=new Check("Encendido");
+let conectar=new Check("Establecido");
 let limpiar=new Check("Computadora Limpia");
 let cambio=new Check("Pasta Termica");
 
